@@ -6,7 +6,7 @@ import {
 } from "react-router-dom"
 import './index.css'
 import Root from './routes/root'
-import Footer from './routes/footer'
+
 import ErrorPage from './errorpage'
 import Product, {loader as productLoader} from './routes/product'
 const router = createBrowserRouter([
@@ -16,15 +16,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     
     children :[
-      {path:"/product",
+      {path:"/",
     element: <Product/>,
     loader: productLoader,
       },
 
-      {path:"/footer",
-      element:<Footer/>,
-
-      }
+    
     ]
     
   },
